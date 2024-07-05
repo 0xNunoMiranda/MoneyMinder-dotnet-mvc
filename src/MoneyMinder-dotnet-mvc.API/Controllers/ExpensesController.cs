@@ -12,9 +12,19 @@ namespace MoneyMinder_dotnet_mvc.API.Controllers
         [HttpPost]
         public IActionResult Register([FromBody] RequestRegisterExpense request)
         {
-            var useCase = new RegisterExpenseUseCase();
-            var response = useCase.Execute(request);
-            return Created(string.Empty,response);
+            try
+            {
+                var useCase = new RegisterExpenseUseCase();
+                var response = useCase.Execute(request);
+                return Created(string.Empty, response);
+            }catch(ArgumentException ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "unknown error from API");
+            }
         }
 
     }
