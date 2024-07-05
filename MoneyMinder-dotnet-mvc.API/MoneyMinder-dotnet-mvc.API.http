@@ -1,0 +1,6 @@
+@MoneyMinder_dotnet_mvc.API_HostAddress = http://localhost:5022
+
+GET {{MoneyMinder_dotnet_mvc.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
