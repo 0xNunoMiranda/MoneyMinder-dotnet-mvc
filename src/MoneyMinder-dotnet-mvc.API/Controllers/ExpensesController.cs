@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MoneyMinder_dotnet_mvc.Application.UseCases.Expenses.Register;
 using MoneyMinder_dotnet_mvc.Communication.Requests;
+using MoneyMinder_dotnet_mvc.Communication.Responses;
 
 namespace MoneyMinder_dotnet_mvc.API.Controllers
 {
@@ -19,11 +20,13 @@ namespace MoneyMinder_dotnet_mvc.API.Controllers
                 return Created(string.Empty, response);
             }catch(ArgumentException ex) 
             {
-                return BadRequest(ex.Message);
+                var errorResponse = new ResponseError(ex.Message);
+                return BadRequest(errorResponse);
             }
             catch
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "unknown error from API");
+                var errorResponse = new ResponseError("unkown error from API");
+                return StatusCode(StatusCodes.Status500InternalServerError, errorResponse);
             }
         }
 

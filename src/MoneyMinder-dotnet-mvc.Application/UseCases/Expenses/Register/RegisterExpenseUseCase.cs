@@ -29,6 +29,6 @@ public class RegisterExpenseUseCase
         if (!paymentTypeIsValid) throw new ArgumentException("Payment Type is not valid");
 
 
-    }
+    } 
 
 }
