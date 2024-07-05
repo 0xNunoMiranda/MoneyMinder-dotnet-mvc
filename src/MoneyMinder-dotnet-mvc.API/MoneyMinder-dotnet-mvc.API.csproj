@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>MoneyMinder_dotnet_mvc.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Application\MoneyMinder-dotnet-mvc.Application.csproj" />
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Communication\MoneyMinder-dotnet-mvc.Communication.csproj" />
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Exceptions\MoneyMinder-dotnet-mvc.Exceptions.csproj" />
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Infrastructure\MoneyMinder-dotnet-mvc.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

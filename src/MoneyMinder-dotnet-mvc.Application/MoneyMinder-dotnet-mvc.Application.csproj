@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>MoneyMinder_dotnet_mvc.Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Communication\MoneyMinder-dotnet-mvc.Communication.csproj" />
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Domain\MoneyMinder-dotnet-mvc.Domain.csproj" />
+    <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Exceptions\MoneyMinder-dotnet-mvc.Exceptions.csproj" />
+  </ItemGroup>
+
+</Project>
