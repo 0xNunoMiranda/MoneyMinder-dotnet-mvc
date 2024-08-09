@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +17,10 @@
     <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Communication\MoneyMinder-dotnet-mvc.Communication.csproj" />
     <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Exceptions\MoneyMinder-dotnet-mvc.Exceptions.csproj" />
     <ProjectReference Include="..\MoneyMinder-dotnet-mvc.Infrastructure\MoneyMinder-dotnet-mvc.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
   </ItemGroup>
 
 </Project>
